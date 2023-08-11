@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const localDB = 'mongodb+srv://rich-gray-bream-cuffCyclicDB';
+const localDB = 'mongodb://rich-gray-bream-cuffCyclicDB';
 
 const connectDB = async () => {
     try {
