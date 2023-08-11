@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const localDB = `mongodb+srv://${process.env.CYCLIC_DB}:${encodeURIComponent(
-    process.env.CYCLIC_APP_ID
-)}@${process.env.CYCLIC_URL}`;
+const localDB = 'mongodb+srv://lucas:pupilli@cyclic.mongodb.net/rich-gray-bream-cuffCyclicDB';
 
 const connectDB = async () => {
     try {
