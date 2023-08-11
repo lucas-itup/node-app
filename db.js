@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 //const localDB = 'mongodb://127.0.0.1:27017/db';
-const localDB = "mongodb://atlas-sql-64d6323baced724294abf7b2-swydi.a.query.mongodb.net/rich-gray-bream-cuffCyclicDB?ssl=true&authSource=admin";
+const localDB = 'mongodb+srv://lucaspupillilp:sH6-xzxdGmsSBmw@cluster0.fdpf52b.mongodb.net/rich-gray-bream-cuffCyclicDB';
 
-
-    const connectDB = async () => {
+const connectDB = async () => {
     try {
         await mongoose.connect(localDB, {
             useNewUrlParser: true,
