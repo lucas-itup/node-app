@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const PORT = 3000;
 app.use(cors({
-    origin: 'http://localhost:3001', // Cambia a la URL de tu aplicación React
+    origin: 'https://integrador-react-ashy.vercel.app/', // Cambia a la URL de tu aplicación React
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Habilita el uso de cookies y autenticación
 }));
