@@ -1,16 +1,27 @@
-const mongoose = require("mongoose");
-const localDB = 'mongodb+srv://lucas:lucaspupilli@cyclic.mongodb.net/rich-gray-bream-cuffCyclicDB';
+const express = require('express')
+const mongoose = require('mongoose')
+
+const app = express()
+const PORT = process.env.PORT || 3000
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(localDB, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log("MongoDB Connected");
+        const conn = await mongoose.connect(process.env.MONGO_URI);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
-        console.error("MongoDB Connection Error:", error);
+        console.log(error);
+        process.exit(1);
     }
-};
+}
 
-module.exports = connectDB;
+//Routes go here
+app.all('*', (req,res) => {
+    res.json({"every thing":"is awesome"})
+})
+
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
