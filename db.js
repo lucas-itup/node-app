@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 //const localDB = 'mongodb://127.0.0.1:27017/db';
-const localDB = "mongodb+srv://lucaspupillilp:sH6-xzxdGmsSBmw@cluster0.fdpf52b.mongodb.net/?retryWrites=true&w=majority";
+const localDB = "mongodb://atlas-sql-64d6323baced724294abf7b2-swydi.a.query.mongodb.net/Cluster0?ssl=true&authSource=admin";
 
-const connectDB = async () => {
+
+    const connectDB = async () => {
     try {
         await mongoose.connect(localDB, {
             useNewUrlParser: true,
