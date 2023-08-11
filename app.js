@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3001;
 const cors = require("cors");
 app.use(cors({
-    origin: 'http://localhost:3000', // Cambia a la URL de tu aplicación React
+    origin: 'https://rich-gray-bream-cuff.cyclic.app', // Cambia a la URL de tu aplicación React
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Habilita el uso de cookies y autenticación
 }));
