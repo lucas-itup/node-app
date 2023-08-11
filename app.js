@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 const PORT = 3000;
+const mongoose = require('mongoose')
 app.use(cors({
     origin: 'https://integrador-react-ashy.vercel.app', // Cambia a la URL de tu aplicación React
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
