@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const localDB = 'mongodb+srv://lucas:pupilli@cyclic.mongodb.net/rich-gray-bream-cuffCyclicDB';
+const localDB = 'mongodb+srv://lucas:lucaspupilli@cyclic.mongodb.net/rich-gray-bream-cuffCyclicDB';
 
 const connectDB = async () => {
     try {
