@@ -5,7 +5,7 @@ async function getDatos(req, res) {
     try {
         await connectDB(); // Llama a la función para conectarte a la base de datos
         const db = mongoose.connection; // Accede a la conexión establecida
-        const collection = db.collection('productos'); // Cambia esto por el nombre de tu colección
+        const collection = db.collection('productos'); // Accede a la colección 'productos'
 
         const datos = await collection.find({}).toArray();
         res.json(datos);
