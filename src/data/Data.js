@@ -1,5 +1,5 @@
 
-const connectDB = require('db');
+const connectDB = require('../../db');
 const mongoose = require("mongoose");
 async function getDatos(req, res) {
     try {
