@@ -1,14 +1,12 @@
 
 const connectDB = require('../../db');
 const mongoose = require("mongoose");
+const ProductoModel = require('../models/Product'); // Reemplaza con la ubicación real de tu modelo
+
 async function getDatos(req, res) {
     try {
-        await connectDB(); // Llama a la función para conectarte a la base de datos
-        const db = mongoose.connection; // Accede a la conexión establecida
-        const collection = db.collection('productos'); // Accede a la colección 'productos'
-
-        const datos = await collection.find({}).toArray();
-        res.json(datos);
+        const productos = await ProductoModel.find({}); // Utiliza el modelo para obtener los productos
+        res.json(productos);
     } catch (err) {
         console.error('Error al obtener datos', err);
         res.status(500).send('Error al obtener datos');
