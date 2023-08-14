@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 const cors = require("cors");
 const dataRoutes = require('./src/routes/dataRoutes'); // Importa las rutas de datos
 const path = require('path');
