@@ -5,8 +5,8 @@ const ProductoModel = require('../models/Product'); // Reemplaza con la ubicaci√
 
 async function getDatos(req, res) {
     try {
-        const productos = await ProductoModel.find({}); // Utiliza el modelo para obtener los productos
-        res.json(productos);
+        const datos = await ProductoModel.find({}).exec();
+        res.json(datos);
     } catch (err) {
         console.error('Error al obtener datos', err);
         res.status(500).send('Error al obtener datos');
