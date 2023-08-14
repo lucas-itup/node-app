@@ -1,7 +1,7 @@
 
 const connectDB = require('../../db');
 const mongoose = require("mongoose");
-const ProductoModel = require('../models/Product'); // Reemplaza con la ubicación real de tu modelo
+const ProductoModel = require('../models/Producto'); // Reemplaza con la ubicación real de tu modelo
 
 async function getDatos(req, res) {
     try {
