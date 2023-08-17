@@ -12,7 +12,7 @@ exports.getCart = async (req, res) => {
 exports.addToCart = async (req, res) => {
     try {
         const cart = await Cart.findOneAndUpdate(
-            { userId: req.userId._id }, // Requiere autenticación
+            { userId: "64d6bd3012c1fb9bab082617" }, // Requiere autenticación
             {
                 $addToSet: {
                     products: {
