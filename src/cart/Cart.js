@@ -10,7 +10,7 @@ exports.getCart = async (req, res) => {
 };
 
 exports.addToCart = async (req, res) => {
-    const userId = req.body.userId; // Obtén userId del cuerpo de la solicitud
+    const userId = req.body; // Obtén userId del cuerpo de la solicitud
     console.log(req.body.userId); // Verifica qué se está recibiendo en el cuerpo de la solicitud
     try {
         const cart = await Cart.findOneAndUpdate(
