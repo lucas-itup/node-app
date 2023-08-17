@@ -10,9 +10,10 @@ exports.getCart = async (req, res) => {
 };
 
 exports.addToCart = async (req, res) => {
+    const userId = req.body.userId; // Obtén userId del cuerpo de la solicitud
     try {
         const cart = await Cart.findOneAndUpdate(
-            { userId: req.userId },
+            { userId },
             {
                 $addToSet: {
                     products: {
