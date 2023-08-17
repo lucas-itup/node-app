@@ -1,5 +1,5 @@
 const Cart = require('../models/cartModel');
-const jwt = require('jsonwebtoken');
+
 exports.getCart = async (req, res) => {
     try {
         const cart = await Cart.findOne({ userId: req.user._id }); // Requiere autenticación
@@ -10,13 +10,9 @@ exports.getCart = async (req, res) => {
 };
 
 exports.addToCart = async (req, res) => {
-    const token = req.header('Authorization').replace('Bearer ', ''); // Obtén el token desde el encabezado
-    const decoded = jwt.verify(token, 'tu-secreto-secreto'); // Verifica el token usando tu secreto
-    const userId = decoded._id; // Obtén el userId del token
     try {
         const cart = await Cart.findOneAndUpdate(
-
-            { userId },
+            { userId: req.userId },
             {
                 $addToSet: {
                     products: {
