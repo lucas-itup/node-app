@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const cartSchema = new mongoose.Schema({
     userId: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'User', // Puedes relacionar el carrito con el usuario si hay autenticación
     },
     products: [
