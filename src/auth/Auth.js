@@ -23,9 +23,17 @@ exports.login = async (req, res, next) => {
         const passwordMatch = await bcrypt.compare(password, user.password);
 
         if (passwordMatch) {
+            // Genera el token JWT
+            const token = jwt.sign(
+                { userId: user._id },
+                'tu_clave_secreta', // Reemplaza con una clave secreta segura
+                { expiresIn: '1h' } // Opcional: expira en 1 hora
+            );
+
             return res.status(200).json({
                 message: "Login successful",
                 user,
+                token, // Envía el token al cliente
             });
         } else {
             return res.status(401).json({
