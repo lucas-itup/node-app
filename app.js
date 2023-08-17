@@ -17,6 +17,7 @@ const server = app.listen(PORT, () =>
 app.use(express.json()); // Middleware para analizar el cuerpo JSON
 // Requiere las rutas de autenticación y las asocia a la URL "/login"
 app.use("/auth", require("./src/routes/authRoutes"));
+app.use("/cart", require("./src/routes/cartRoutes"));
 app.use('/data', dataRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 // Conectar a la base de datos (debes descomentar esto si tienes una configuración adecuada)

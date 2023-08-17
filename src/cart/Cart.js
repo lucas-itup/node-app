@@ -1,0 +1,32 @@
+const Cart = require('../models/cartModel');
+
+exports.getCart = async (req, res) => {
+    try {
+        const cart = await Cart.findOne({ userId: req.user._id }); // Requiere autenticación
+        res.json(cart);
+    } catch (error) {
+        res.status(500).json({ message: 'Error al obtener el carrito' });
+    }
+};
+
+exports.addToCart = async (req, res) => {
+    try {
+        const cart = await Cart.findOneAndUpdate(
+            { userId: req.user._id }, // Requiere autenticación
+            {
+                $addToSet: {
+                    products: {
+                        productId: req.body.productId,
+                    },
+                },
+            },
+            { upsert: true, new: true }
+        );
+
+        res.json(cart);
+    } catch (error) {
+        res.status(500).json({ message: 'Error al agregar producto al carrito' });
+    }
+};
+
+// Implementa los controladores para actualizar y eliminar productos del carrito
