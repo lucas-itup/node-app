@@ -22,7 +22,10 @@ exports.addToCart = async (req, res) => {
             {
                 $addToSet: {
                     products: {
-                        $each: productIds.map(productId => ({ productId })),
+                        $each: productData.map(product => ({
+                            productId: product.productId,
+                            quantity: product.cantidad // Agregar la cantidad al objeto del producto
+                        })),
                     },
                 },
             },
