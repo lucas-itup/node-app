@@ -10,7 +10,7 @@ exports.getCart = async (req, res) => {
 };
 
 exports.addToCart = async (req, res) => {
-    const productIds = req.body.carrito; // Cambio en la obtención de los IDs de productos
+    const productData = req.body.carrito; // Cambio en la obtención de los IDs de productos
 
     const userId = req.body.userId; // Obtén userId del cuerpo de la solicitud
     console.log(req.body.userId); // Verifica qué se está recibiendo en el cuerpo de la solicitud
