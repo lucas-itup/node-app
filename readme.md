@@ -1,4 +1,4 @@
-ENDPOINTS: 
+ENDPOINTS
 
 INICIAR SESION: https://rich-gray-bream-cuff.cyclic.app/auth/login { username, password }
 
