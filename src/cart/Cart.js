@@ -10,12 +10,12 @@ exports.getCart = async (req, res) => {
 };
 
 exports.addToCart = async (req, res) => {
-    const productData = req.body.carrito; // Cambio en la obtención de los IDs de productos
+    const productData = req.body.carrito;
 
-    const userId = req.body.userId; // Obtén userId del cuerpo de la solicitud
-    console.log(req.body.userId); // Verifica qué se está recibiendo en el cuerpo de la solicitud
-    console.log(req.body); // Verifica qué se está recibiendo en el cuerpo de la solicitud
-    console.log("hola"); // Verifica qué se está recibiendo en el cuerpo de la solicitud
+    const userId = req.body.userId;
+    console.log(req.body.userId);
+    console.log(req.body);
+    console.log("hola");
     try {
         const cart = await Cart.findOneAndUpdate(
             { userId },
@@ -40,5 +40,3 @@ exports.addToCart = async (req, res) => {
         });
     }
 };
-
-// Implementa los controladores para actualizar y eliminar productos del carrito
